@@ -729,6 +729,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2221402160564314746, guid: 42671a636e2d48247a79ffe582537a43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485629010033015332, guid: 42671a636e2d48247a79ffe582537a43, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485629010033015332, guid: 42671a636e2d48247a79ffe582537a43, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8683473739534623164, guid: 42671a636e2d48247a79ffe582537a43, type: 3}
       propertyPath: m_Name
       value: WitchRoom
