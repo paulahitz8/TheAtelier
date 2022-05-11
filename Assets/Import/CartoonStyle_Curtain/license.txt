@@ -1,0 +1,11 @@
+Model Information:
+* title:	CartoonStyle_Curtain
+* source:	https://sketchfab.com/3d-models/cartoonstyle-curtain-1e37ea57b41949a3b4a495d6fbabeee1
+* author:	aylmer (https://sketchfab.com/d.s.aylmer1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CartoonStyle_Curtain" (https://sketchfab.com/3d-models/cartoonstyle-curtain-1e37ea57b41949a3b4a495d6fbabeee1) by aylmer (https://sketchfab.com/d.s.aylmer1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
