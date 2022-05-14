@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4251420044034285586
 Transform:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grabbable: {fileID: 0}
+  _grabbable: {fileID: 1189083497}
   _rigidbody: {fileID: 1189083493}
   _scaleMassWithSize: 1
 --- !u!114 &1189083497
@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 8321103123444978115}
   - component: {fileID: 5361294745447753845}
   - component: {fileID: 955192432046620595}
+  - component: {fileID: 306954560}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -237,3 +238,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1696ab627d3b07346a4efc0cbfad92fc, type: 2}
+--- !u!114 &306954560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024452293279498701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb5261d7cd290b4eacc0fd20e2db09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 0}
+  _renderer: {fileID: 0}
+  _normalColor: {r: 1, g: 0, b: 0, a: 0}
+  _hoverColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+  _selectColor: {r: 0, g: 1, b: 0, a: 0}
+  _disabledColor: {r: 0, g: 0, b: 0, a: 0}

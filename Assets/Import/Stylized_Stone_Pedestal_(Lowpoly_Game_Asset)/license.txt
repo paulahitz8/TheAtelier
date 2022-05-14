@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized Stone Pedestal (Lowpoly Game Asset)
+* source:	https://sketchfab.com/3d-models/stylized-stone-pedestal-lowpoly-game-asset-f97ed585d9ef4b7589c873a686fe6531
+* author:	Asgart (https://sketchfab.com/Asgart)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized Stone Pedestal (Lowpoly Game Asset)" (https://sketchfab.com/3d-models/stylized-stone-pedestal-lowpoly-game-asset-f97ed585d9ef4b7589c873a686fe6531) by Asgart (https://sketchfab.com/Asgart) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

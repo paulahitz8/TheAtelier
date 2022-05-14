@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3331456036617974168}
   - component: {fileID: 2765108612145515576}
   - component: {fileID: 1720145899279968880}
+  - component: {fileID: 810307124}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -98,6 +99,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8214f64468bee1f4fbe05cd77a437f40, type: 2}
+--- !u!114 &810307124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109537687192365506}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb5261d7cd290b4eacc0fd20e2db09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 0}
+  _renderer: {fileID: 0}
+  _normalColor: {r: 1, g: 0, b: 0, a: 0}
+  _hoverColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+  _selectColor: {r: 0, g: 1, b: 0, a: 0}
+  _disabledColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8964258779458878299
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,9 +132,11 @@ GameObject:
   - component: {fileID: 2009035877}
   - component: {fileID: 2009035876}
   - component: {fileID: 2009035875}
+  - component: {fileID: 2093095576}
+  - component: {fileID: 2093095583}
   m_Layer: 0
   m_Name: OrangePotion
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grabbable: {fileID: 0}
+  _grabbable: {fileID: 2009035876}
   _rigidbody: {fileID: 2009035872}
   _scaleMassWithSize: 1
 --- !u!114 &2009035876
@@ -237,3 +258,29 @@ MonoBehaviour:
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 2009035877}
+--- !u!114 &2093095576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964258779458878299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859352821580a684491b58149ea76858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 
+--- !u!65 &2093095583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964258779458878299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 175.03505, y: 354.5946, z: 144.16116}
+  m_Center: {x: 4.5379252, y: 206.66109, z: -5.700002}
