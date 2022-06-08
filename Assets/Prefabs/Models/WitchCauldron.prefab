@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1369441111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369441112}
+  m_Layer: 0
+  m_Name: PotionCreatePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1369441112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369441111}
+  m_LocalRotation: {x: 0.000000021855696, y: 0, z: -0, w: -1}
+  m_LocalPosition: {x: 246.8, y: 140.8, z: 205.2}
+  m_LocalScale: {x: 0.00071344513, y: 0.00071344513, z: 0.00071344513}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4746694577351573079}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898915423956053645
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +273,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 350f36a9665da5c40af8ad2d289f64bc, type: 2}
 --- !u!1 &7374095169562645923
@@ -369,6 +400,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4746694577351573079}
+  - component: {fileID: 1668661000}
+  - component: {fileID: 1668660998}
   m_Layer: 0
   m_Name: WitchCauldron
   m_TagString: Untagged
@@ -383,14 +416,57 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8789327087787645878}
-  m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0022663411, y: 0.0022663411, z: 0.0022663411}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5927729916034816692}
   - {fileID: 4732887616957163575}
   - {fileID: 4894763677122930152}
+  - {fileID: 1369441112}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1668661000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789327087787645878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 115.561806, y: 97.072105, z: 92.054695}
+  m_Center: {x: -4.099997, y: -9.567427, z: 1.5700015}
+--- !u!114 &1668660998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789327087787645878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7fd4da00696044c9d2455697d52757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPotions:
+  - {fileID: 1871072503, guid: c652a547c48d36d46b80d3569125557f, type: 3}
+  - {fileID: 2804181424078562122, guid: 2691822d1114388499ea05ea9b56f2b0, type: 3}
+  - {fileID: 2093095576, guid: 4fdbf4301b3b748489d42e01328eb606, type: 3}
+  - {fileID: 7594424361251774637, guid: 7345268d0925aed46bb009a44231b5fa, type: 3}
+  - {fileID: 15436404, guid: 6ffe3c5a7ad17284c82476b7e4d7453e, type: 3}
+  - {fileID: 647219049180676310, guid: c21ed65903f59cc40a5fe50dc167339b, type: 3}
+  - {fileID: 1174986202205099264, guid: 009254e112abbf249ae72187160005f7, type: 3}
+  - {fileID: 3583620624058599424, guid: e833a463a2037be418b5fa78d75906d3, type: 3}
+  - {fileID: 2519754631501978058, guid: 9d7906d560bf7464181fa77b52f725e9, type: 3}
+  - {fileID: 7233390515301984809, guid: 15ee077318250254eacef052acd4d568, type: 3}
+  - {fileID: 8528593582496216641, guid: d25d52bf13702b54490213d03e315022, type: 3}
+  - {fileID: 1781743466986701617, guid: 7992010e054f5344b9d06185fea2617a, type: 3}
+  - {fileID: 7204975039890814312, guid: 5ae76a9edcf15ca40b9b3b96746108d2, type: 3}
+  - {fileID: 6140221051009831581, guid: f3d3a6a9605100d47a5284d12536d219, type: 3}
+  - {fileID: 3808821492020226571, guid: d94e5d65ecc4a9f4d9bf9fd608db082f, type: 3}
+  newPotionPos: {fileID: 1369441112}
