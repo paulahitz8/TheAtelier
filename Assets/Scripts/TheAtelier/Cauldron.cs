@@ -8,6 +8,9 @@ public class Cauldron : MonoBehaviour
     public List<Potion> allPotions;
     private List<Ingredient> ingredients;
     public Transform newPotionPos;
+    public GameObject liquidFull;
+    public GameObject liquidHalf;
+    public int spoonSeconds;
 
     private void Start()
     {
@@ -16,7 +19,8 @@ public class Cauldron : MonoBehaviour
 
     private void Update()
     {
-        CheckIngredients();
+        if (ingredients.Count > 0)
+            LiquidState();
     }
 
     void OnTriggerEnter(Collider collision)
@@ -39,11 +43,38 @@ public class Cauldron : MonoBehaviour
         }
     }
 
-    private void CheckIngredients()
+    private void OnTriggerStay(Collider collision)
     {
-        if (ingredients.Count != 2)
-            return;
+        if (collision.gameObject.tag == "Spoon")
+        {
+            if (ingredients.Count == 2)
+            {
+                StartCoroutine(CheckIngredients());
+            }
+        }
+    }
+
+    private void LiquidState()
+    {
+        if (ingredients.Count == 1)
+        {
+            liquidHalf.SetActive(true);
+        }
+        else if (ingredients.Count == 2)
+        {
+            liquidHalf.SetActive(false);
+            liquidFull.SetActive(true);
+        }
         else
+        {
+            liquidFull.SetActive(false);
+        }
+    }
+    private IEnumerator CheckIngredients()
+    {
+        yield return new WaitForSeconds(spoonSeconds);
+        
+        if (ingredients.Count == 2)
         {
             if (ingredients[0].type == "Red" || ingredients[1].type == "Red")
             {
@@ -109,6 +140,7 @@ public class Cauldron : MonoBehaviour
             }
 
             ingredients.Clear();
+            LiquidState();
         }
     }
 

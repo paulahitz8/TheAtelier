@@ -9,6 +9,7 @@ TagManager:
   - CutHerb
   - Herb
   - Plate
+  - Spoon
   layers:
   - Default
   - TransparentFX
