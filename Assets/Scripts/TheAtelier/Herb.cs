@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class Herb : Ingredient
 {
-    //public override string type { get; protected set; }
-    //public  new string type;
+    public bool onPlate;
+
+    private void Start()
+    {
+        onPlate = false;
+    }
+    void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "Plate")
+            onPlate = true;
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Plate")
+            onPlate = false;
+    }
 }

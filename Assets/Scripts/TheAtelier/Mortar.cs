@@ -16,9 +16,9 @@ public class Mortar : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Herb")
+        if (collision.gameObject.tag == "Herb" && collision.gameObject.GetComponent<Herb>() != null)
         {
-            if (collision.gameObject.GetComponent<Herb>() != null)
+            if (collision.gameObject.GetComponent<Herb>().onPlate)
             {
                 if (counter == impactTimesMax)
                 {

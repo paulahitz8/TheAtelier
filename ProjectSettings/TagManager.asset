@@ -8,6 +8,7 @@ TagManager:
   - Palo
   - CutHerb
   - Herb
+  - Plate
   layers:
   - Default
   - TransparentFX
