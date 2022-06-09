@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ba7140e5368a0e4eaa5e063e9ab8e27, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.59
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ba7140e5368a0e4eaa5e063e9ab8e27, type: 3}
       propertyPath: m_LocalRotation.w
@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9ba7140e5368a0e4eaa5e063e9ab8e27, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5f64f2281832e94cb6e5ae2f51a9530, type: 2}
     - target: {fileID: 919132149155446097, guid: 9ba7140e5368a0e4eaa5e063e9ab8e27, type: 3}
       propertyPath: m_Name
       value: cauldron_liquid_high
@@ -473,6 +477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ee95f16c76373cb4eb612a9c7efb7b87, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e48f751a0ef638a47bc7a566260ba9db, type: 2}
     - target: {fileID: 919132149155446097, guid: ee95f16c76373cb4eb612a9c7efb7b87, type: 3}
       propertyPath: m_Name
       value: cauldron_liquid_low
@@ -564,6 +572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 427afa0177afdd34f93968e9ab505597, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d47a459baac1a243bf6cba5b875fa39, type: 2}
     - target: {fileID: 919132149155446097, guid: 427afa0177afdd34f93968e9ab505597, type: 3}
       propertyPath: m_Name
       value: cauldron
