@@ -58,6 +58,17 @@ public class Cauldron : MonoBehaviour
                 StartCoroutine(CheckIngredients());
             }
         }
+
+        else if (collision.gameObject.tag == "Button")
+        {
+            var button = collision.gameObject.GetComponent<ButtonPotion>();
+            if (button.color == "Red")
+                BrewPotion("Red");
+            else if (button.color == "Blue")
+                BrewPotion("Blue");
+
+            button.transform.position = button.initialPos;
+        }
     }
 
     private void LiquidState()
