@@ -344,11 +344,11 @@ MonoBehaviour:
   liquidFull: {fileID: 919132149087559504}
   liquidHalf: {fileID: 919132147772549154}
   spoonSeconds: 4
-  dropHerb: {fileID: 8300000, guid: e560afd97701ae74baf74f6b45172e5f, type: 3}
-  dropPotion: {fileID: 8300000, guid: 7dea4f9706c0b83449211d090520fa1a, type: 3}
+  dropHerb: {fileID: 8300000, guid: 0f3daca541a46b8449f4c12bffeec1ef, type: 3}
+  dropPotion: {fileID: 8300000, guid: 8b83c25776a14f843b24b23f92004b65, type: 3}
   brewing: {fileID: 8300000, guid: c485a8e6e8106eb4dba6a5a482afe101, type: 3}
   spoon: {fileID: 8300000, guid: 944d27adaebcbb041ac3e5fca5554b17, type: 3}
-  tada: {fileID: 8300000, guid: 94c9a1760e36cc54383ca948d4f9a421, type: 3}
+  tada: {fileID: 8300000, guid: 71f566f7b16b37244964aacea1f2908f, type: 3}
 --- !u!82 &1668660997
 AudioSource:
   m_ObjectHideFlags: 0

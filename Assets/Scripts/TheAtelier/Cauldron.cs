@@ -14,14 +14,11 @@ public class Cauldron : MonoBehaviour
 
     public AudioClip dropHerb;
     public AudioClip dropPotion;
-    public AudioClip brewing;
     public AudioClip spoon;
     public AudioClip tada;
 
-    private bool isPlaying;
     private void Start()
     {
-        isPlaying = false;
         ingredients = new List<Ingredient>();
     }
 
@@ -50,15 +47,14 @@ public class Cauldron : MonoBehaviour
                 ingredients.Add(collision.gameObject.GetComponent<Herb>());
                 Destroy(collision.gameObject);
             }
-        }
-    }
 
-    private void OnTriggerStay(Collider collision)
-    {
-        if (collision.gameObject.tag == "Spoon")
+
+        }
+        else if (collision.gameObject.tag == "Spoon")
         {
             if (ingredients.Count == 2)
             {
+                AudioSource.PlayClipAtPoint(spoon, transform.position);
                 StartCoroutine(CheckIngredients());
             }
         }
@@ -66,11 +62,6 @@ public class Cauldron : MonoBehaviour
 
     private void LiquidState()
     {
-        if (!isPlaying)
-        {
-            AudioSource.PlayClipAtPoint(brewing, transform.position);
-            isPlaying = true;
-        }
         if (ingredients.Count == 1)
         {
             liquidHalf.SetActive(true);
@@ -83,13 +74,10 @@ public class Cauldron : MonoBehaviour
         else
         {
             liquidFull.SetActive(false);
-            isPlaying = false;
         }
     }
     private IEnumerator CheckIngredients()
     {
-        AudioSource.PlayClipAtPoint(spoon, transform.position);
-
         yield return new WaitForSeconds(spoonSeconds);
         
         if (ingredients.Count == 2)
@@ -164,8 +152,8 @@ public class Cauldron : MonoBehaviour
 
     private void BrewPotion(string potion)
     {
-        AudioSource.PlayClipAtPoint(tada, newPotionPos.position);
         Instantiate(FindBrew(potion), newPotionPos.position, newPotionPos.rotation);
+        AudioSource.PlayClipAtPoint(tada, transform.position);
     }
 
     private GameObject FindBrew(string type)
