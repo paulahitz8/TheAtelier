@@ -12,8 +12,16 @@ public class Cauldron : MonoBehaviour
     public GameObject liquidHalf;
     public int spoonSeconds;
 
+    public AudioClip dropHerb;
+    public AudioClip dropPotion;
+    public AudioClip brewing;
+    public AudioClip spoon;
+    public AudioClip tada;
+
+    private bool isPlaying;
     private void Start()
     {
+        isPlaying = false;
         ingredients = new List<Ingredient>();
     }
 
@@ -29,6 +37,7 @@ public class Cauldron : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Potion>() != null)
             {
+                AudioSource.PlayClipAtPoint(dropPotion, transform.position);
                 ingredients.Add(collision.gameObject.GetComponent<Potion>());
                 Destroy(collision.gameObject);
             }
@@ -37,6 +46,7 @@ public class Cauldron : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Herb>() != null)
             {
+                AudioSource.PlayClipAtPoint(dropHerb, transform.position);
                 ingredients.Add(collision.gameObject.GetComponent<Herb>());
                 Destroy(collision.gameObject);
             }
@@ -56,6 +66,11 @@ public class Cauldron : MonoBehaviour
 
     private void LiquidState()
     {
+        if (!isPlaying)
+        {
+            AudioSource.PlayClipAtPoint(brewing, transform.position);
+            isPlaying = true;
+        }
         if (ingredients.Count == 1)
         {
             liquidHalf.SetActive(true);
@@ -68,10 +83,13 @@ public class Cauldron : MonoBehaviour
         else
         {
             liquidFull.SetActive(false);
+            isPlaying = false;
         }
     }
     private IEnumerator CheckIngredients()
     {
+        AudioSource.PlayClipAtPoint(spoon, transform.position);
+
         yield return new WaitForSeconds(spoonSeconds);
         
         if (ingredients.Count == 2)
@@ -80,68 +98,74 @@ public class Cauldron : MonoBehaviour
             {
                 // purple
                 if (ingredients[0].type == "Blue" || ingredients[1].type == "Blue")
-                    Instantiate(FindBrew("Purple"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("Purple");
 
                 // orange
                 else if (ingredients[0].type == "Purple" || ingredients[1].type == "Purple")
-                    Instantiate(FindBrew("Orange"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("Orange");
 
                 // dark red
                 else if (ingredients[0].type == "CutRosemary" || ingredients[1].type == "CutRosemary")
-                    Instantiate(FindBrew("DarkRed"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("DarkRed");
 
                 // light red
                 else if (ingredients[0].type == "CutSunflower" || ingredients[1].type == "CutSunflower")
-                    Instantiate(FindBrew("LightRed"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("LightRed");
             }
             else if (ingredients[0].type == "Blue" || ingredients[1].type == "Blue")
             {
                 // green
                 if (ingredients[0].type == "Purple" || ingredients[1].type == "Purple")
-                    Instantiate(FindBrew("Green"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("Green");
 
                 // dark blue
                 else if (ingredients[0].type == "CutRosemary" || ingredients[1].type == "CutRosemary")
-                    Instantiate(FindBrew("DarkBlue"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("DarkBlue");
 
                 // light blue
                 else if (ingredients[0].type == "CutSunflower" || ingredients[1].type == "CutSunflower")
-                    Instantiate(FindBrew("LightBlue"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("LightBlue");
             }
             else if (ingredients[0].type == "Purple" || ingredients[1].type == "Purple")
             {
                 // dark purple
                 if (ingredients[0].type == "CutRosemary" || ingredients[1].type == "CutRosemary")
-                    Instantiate(FindBrew("DarkPurple"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("DarkPurple");
 
                 // light purple
                 else if (ingredients[0].type == "CutSunflower" || ingredients[1].type == "CutSunflower")
-                    Instantiate(FindBrew("LightPurple"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("LightPurple");
             }
             else if (ingredients[0].type == "Green" || ingredients[1].type == "Green")
             {
                 // dark green
                 if (ingredients[0].type == "CutRosemary" || ingredients[1].type == "CutRosemary")
-                    Instantiate(FindBrew("DarkGreen"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("DarkGreen");
 
                 // light green
                 else if (ingredients[0].type == "CutSunflower" || ingredients[1].type == "CutSunflower")
-                    Instantiate(FindBrew("LightGreen"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("LightGreen");
             }
             else if (ingredients[0].type == "Orange" || ingredients[1].type == "Orange")
             {
                 // dark orange
                 if (ingredients[0].type == "CutRosemary" || ingredients[1].type == "CutRosemary")
-                    Instantiate(FindBrew("DarkOrange"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("DarkOrange");
 
                 // light orange
                 else if (ingredients[0].type == "CutSunflower" || ingredients[1].type == "CutSunflower")
-                    Instantiate(FindBrew("LightOrange"), newPotionPos.position, newPotionPos.rotation);
+                    BrewPotion("LightOrange");
             }
 
             ingredients.Clear();
             LiquidState();
         }
+    }
+
+    private void BrewPotion(string potion)
+    {
+        AudioSource.PlayClipAtPoint(tada, newPotionPos.position);
+        Instantiate(FindBrew(potion), newPotionPos.position, newPotionPos.rotation);
     }
 
     private GameObject FindBrew(string type)

@@ -10,6 +10,8 @@ public class Mortar : MonoBehaviour
     private int counter;
     public GameObject spawnPos;
 
+    public AudioClip impact;
+
     private void Start()
     {
         counter = 0;
@@ -21,6 +23,7 @@ public class Mortar : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Herb>().onPlate)
             {
+                AudioSource.PlayClipAtPoint(impact, transform.position);
                 if (counter == impactTimesMax)
                 {
                     ManageHerb(collision.gameObject);
