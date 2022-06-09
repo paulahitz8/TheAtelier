@@ -31,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2763885716041309291}
-  m_LocalRotation: {x: -0, y: -0.49445415, z: -0, w: 0.86920375}
+  m_LocalRotation: {x: 0, y: -0.4944501, z: 0, w: 0.869206}
   m_LocalPosition: {x: 3.734912, y: 18.33, z: 12.357355}
   m_LocalScale: {x: 0.007202139, y: 0.007202139, z: 0.007202139}
   m_ConstrainProportionsScale: 0
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8695bdf557b717a4281311696e294133, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 99ce0ae4f83d81a4abc11d2172323176, type: 2}
+      objectReference: {fileID: 2100000, guid: ccab3d5b983fff8418e9c04ff63e0faa, type: 2}
     - target: {fileID: 919132149155446097, guid: 8695bdf557b717a4281311696e294133, type: 3}
       propertyPath: m_Name
       value: orange_liquid

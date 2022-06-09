@@ -129,7 +129,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4580537594296815746}
-  m_LocalRotation: {x: -0, y: -0.66600007, z: -0, w: 0.7459518}
+  m_LocalRotation: {x: 0, y: -0.66599876, z: 0, w: 0.74595284}
   m_LocalPosition: {x: -0.9065588, y: 12.633083, z: 4.0781}
   m_LocalScale: {x: 0.007202139, y: 0.007202139, z: 0.007202139}
   m_ConstrainProportionsScale: 0
@@ -140,7 +140,7 @@ Transform:
   - {fileID: 6541015426273302673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 46.345, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -83.518, z: 0}
 --- !u!54 &8437675310827842144
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5d7c05f67e9f620488fefc7ffea2cabc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f942806684b985d438a8e34ff4d1df59, type: 2}
+      objectReference: {fileID: 2100000, guid: 3f614dadaffaedf47ab78c474c9d6317, type: 2}
     - target: {fileID: 919132149155446097, guid: 5d7c05f67e9f620488fefc7ffea2cabc, type: 3}
       propertyPath: m_Name
       value: green_liquid

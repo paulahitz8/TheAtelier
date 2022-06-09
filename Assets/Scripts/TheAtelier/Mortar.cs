@@ -8,6 +8,7 @@ public class Mortar : MonoBehaviour
     public int impactTimesMax;
     public List<Herb> cutHerbs;
     private int counter;
+    public GameObject spawnPos;
 
     private void Start()
     {
@@ -35,12 +36,12 @@ public class Mortar : MonoBehaviour
         var type = herb.GetComponent<Herb>().type;
         if (type == "Rosemary")
         {
-            Instantiate(FindCutHerb("CutRosemary"), herb.transform.position, herb.transform.rotation);
+            Instantiate(FindCutHerb("CutRosemary"), spawnPos.transform.position, spawnPos.transform.rotation);
             Destroy(herb);
         }
         else if (type == "Sunflower")
         {
-            Instantiate(FindCutHerb("CutSunflower"), herb.transform.position, herb.transform.rotation);
+            Instantiate(FindCutHerb("CutSunflower"), spawnPos.transform.position, spawnPos.transform.rotation);
             Destroy(herb);
         }
     }
